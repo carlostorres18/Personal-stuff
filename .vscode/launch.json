@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/torre/OneDrive/Documents/Personal Projects/Personal stuff",
-      "program": "c:/Users/torre/OneDrive/Documents/Personal Projects/Personal stuff/build/Debug/outDebug",
+      "cwd": "c:/Users/torre/OneDrive/Documents/Personal Projects/Personal stuff/c++/Week 9",
+      "program": "c:/Users/torre/OneDrive/Documents/Personal Projects/Personal stuff/c++/Week 9/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
