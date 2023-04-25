@@ -5,10 +5,27 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 #include "warmup.h"
 
+
+void PrintPoints(vector<Point> points){
+    cout<<"[";
+    for(int i = 0; i < points.size(); i++){
+        points.at(i).Print();
+        if(i != points.size() - 1){
+        cout<<", ";
+        }
+    }
+    cout<<"]";
+}
+
+
 int main(){
+    srand((unsigned) time(NULL));
+
     vector<Point> points(5);
     Map myMap;
     Coordinate myHouse(7, 7);
@@ -23,5 +40,10 @@ int main(){
     c.Print();
 
     cout<<a.DistanceTo(b)<<endl;
-
+    for(int i = 0; i < points.size(); i++){
+        points.at(i).x = rand() % 10;
+        points[i].y = rand() % 10;
+    }
+    PrintPoints(points);
+    
 }

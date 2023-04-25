@@ -31,15 +31,16 @@ class Map{
 
 class Point{
     private:
-        int x;
-        int y;
+        // int x;
+        // int y;
     public:
+    int x, y;
         Point(int a = 0, int b = 0){
             x = a;
             y = b;
         }
         void Print(){
-            cout<<"("<<x<<", "<<y<<")"<<endl;
+            cout<<"("<<x<<", "<<y<<")";
         }
         float DistanceTo(Point anotherPoint){
             // current point of x
