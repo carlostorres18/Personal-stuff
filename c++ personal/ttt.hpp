@@ -118,6 +118,7 @@ void checkWinner() {
             return;
         }
     }
+    // Check Diagonally
     for(int i = 0; i < 3; i++){
         if ((answer[0][i] == 'x' && answer[4][i] == 'x' && answer[8][i] == 'x')) {
             cout << "Player 'x' wins!" << endl;
@@ -130,6 +131,7 @@ void checkWinner() {
             return;
         }
     }
+    // Check Diagonally
     for(int i = 0; i < 3; i++){
         if ((answer[2][i] == 'x' && answer[4][i] == 'x' && answer[6][i] == 'x')) {
             cout << "Player 'x' wins!" << endl;

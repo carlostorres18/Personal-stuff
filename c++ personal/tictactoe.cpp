@@ -1,8 +1,3 @@
-// Print the board positions of the tic tac toe. [check]
-// Get the users to print 
-
-
-
 #include <iostream>
 #include <vector>
 #include <string>
