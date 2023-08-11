@@ -13,11 +13,28 @@ int main(){
     for(int i = 0; i < 9; i++){
         answer[i] = "";
     }
-    while(true){
+
+    bool gameOver = false;
+
+    while(!gameOver){
         gameGrid();
         playerChoices();
+        checkWinner(); 
+
+        if(isWinner){
+            gameGrid();
+            gameOver = true;
+            break;
+        }
+        gameGrid();
         playerChoices2();
+        checkWinner();   
         
+        if(isWinner){
+            gameGrid();
+            gameOver = true;
+            break;
+        }
     }
-    checkWinner();
+    return 0;
 }
