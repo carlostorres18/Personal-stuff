@@ -21,6 +21,14 @@ int main(){
             gameOver = true;
             break;
         }
+
+        if(isDraw()){
+            cout<<"It's a draw!"<<endl;
+            gameGrid();
+            gameOver = true;
+            break;
+        }
+
         gameGrid();
         playerChoices2();
         checkWinner();   
@@ -30,6 +38,14 @@ int main(){
             gameOver = true;
             break;
         }
+
+        if(isDraw()){
+            cout<<"It's a draw!"<<endl;
+            gameGrid();
+            gameOver = true;
+            break;
+        }
+
     }
     return 0;
 }

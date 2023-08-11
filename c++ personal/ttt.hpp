@@ -7,6 +7,15 @@ string answer[9];
 
 bool isWinner = false;
 
+bool isDraw(){
+    for(int i = 0; i < 9; i++){
+        if(answer[i] == ""){
+            return false;
+        }
+    }
+    return true;
+}
+
 void gameGrid(){
     cout<<"["<<answer[0]<<"]"<<"["<<answer[1]<<"]"<<"["<<answer[2]<<"]"<<endl;
     cout<<"["<<answer[3]<<"]"<<"["<<answer[4]<<"]"<<"["<<answer[5]<<"]"<<endl;
