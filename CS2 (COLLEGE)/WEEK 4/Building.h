@@ -31,7 +31,7 @@ class Building{
             cout<<numFloors<<endl;
             cout<<sqFt<<endl;
             if(skyScrapper){
-                cost += cost * .20;
+                cost = cost + cost * .20;
                 cout<<"Since this is a skyscrapper, the cost is: ";
                 cout<<cost<<endl;
             }
