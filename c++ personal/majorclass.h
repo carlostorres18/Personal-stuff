@@ -30,3 +30,23 @@ class SameClassMajor{
         classSubject = inClassSubject;
     }
 };
+
+class Student {
+
+    // sameClassMajor determines if class subject is same as major
+};
+
+class Course {
+    // register() method
+        // for each Student in enrollment list
+        // if student.sameClassMajor() == true
+            // Course register section 1
+        // else
+            // register section 2
+
+    // display sections
+        // 1: std1, std2, ...
+        // 2: std4, std7, ...
+};
+
+Course CSCI2380;
