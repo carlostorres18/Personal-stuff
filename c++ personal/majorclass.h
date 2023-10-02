@@ -29,8 +29,10 @@ class Student {
         string name;
         string major;
         string classSubject;
+        
 
     public:
+    bool sameClassMajor;
         void display(){
             cout<<"Student's Information: "<<endl;
             cout<<"name: "<<name<<endl;
@@ -44,17 +46,20 @@ class Student {
         name = inName;
         major = inMajor;
         classSubject = inClassSubject;
+        if(classSubject == major){
+                sameClassMajor = true;}
+    
     }
 
     // sameClassMajor determines if class subject is same as major
-    Student sameClassMajor(){
-        if(classSubject == major){
-                cout<<"Classroom: You are in Classroom 1"<<endl;
-            }
-            else{
-                cout<<"Classroom: You are in Classroom 2"<<endl;
-            }
-    }
+    // Student sameClassMajor(){
+    //     if(classSubject == major){
+    //             cout<<"Classroom: You are in Classroom 1"<<endl;
+    //         }
+    //         else{
+    //             cout<<"Classroom: You are in Classroom 2"<<endl;
+    //         }
+    // }
 };
 
 class Course {
@@ -65,8 +70,8 @@ class Course {
 
     public:
 
-    void registerForClass(){
-        if(sameClassMajor() == true){
+    void registerForClass(Student newStu){
+        if(newStu.sameClassMajor == true){
             cout<<"You are in class 1"<<endl;
         }
         else{
