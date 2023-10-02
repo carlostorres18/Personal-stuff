@@ -21,5 +21,5 @@ int main(){
 
 
     myArray.print(); // print all the values in the array
-    // dont't print unintialized values;
+    //dont't print unintialized values;
 }

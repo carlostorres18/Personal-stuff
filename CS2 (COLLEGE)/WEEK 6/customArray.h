@@ -1,5 +1,5 @@
 // Define a class
-// SizingArray
+//SizingArray
     // attributes
         // list of integers
         // constant integer to define the size of the list
