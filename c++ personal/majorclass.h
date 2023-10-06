@@ -1,38 +1,40 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-class SameClassMajor{
-    private:
-        string major;
-        string classSubject;
+class Student;  
 
-    public:
-        void display(){
-            if(classSubject == major){
-                cout<<"Classroom: You are in Classroom 1"<<endl;
-            }
-            else{
-                cout<<"Classroom: You are in Classroom 2"<<endl;
-            }
+// class SameClassMajor{
+//     private:
+//         string major;
+//         string classSubject;
+
+//     public:
+//         void display(){
+//             if(classSubject == major){
+//                 cout<<"Classroom: You are in Classroom 1"<<endl;
+//             }
+//             else{
+//                 cout<<"Classroom: You are in Classroom 2"<<endl;
+//             }
             
-        }
+//         }
 
-    SameClassMajor(string inMajor = "undecided", string inClassSubject = "unknown"){
-        major = inMajor;
-        classSubject = inClassSubject;
-    }
-};
+//     SameClassMajor(string inMajor = "undecided", string inClassSubject = "unknown"){
+//         major = inMajor;
+//         classSubject = inClassSubject;
+//     }
+// };
 
 class Student {
     private:
         int idNumber;
         string name;
         string major;
-        string classSubject;
+
         
 
     public:
-    bool sameClassMajor;
         void display(){
             cout<<"Student's Information: "<<endl;
             cout<<"name: "<<name<<endl;
@@ -41,13 +43,16 @@ class Student {
             
         }
 
-    Student(int inIDnumber = 0, string inName = "", string inMajor = "undecided", string inClassSubject = "unknown"){
+        void registerForCourse(vector<int>section){
+        ;
+        
+    }
+        
+
+    Student(int inIDnumber = 0, string inName = "", string inMajor = "undecided"){
         idNumber = inIDnumber;
         name = inName;
         major = inMajor;
-        classSubject = inClassSubject;
-        if(classSubject == major){
-                sameClassMajor = true;}
     
     }
 
@@ -64,20 +69,30 @@ class Student {
 
 class Course {
     private:
-    int idNumber;
-    string name;
-    string major;
+    string courseName;
+    string subject;
+    vector<vector<Student*>> sections;
 
     public:
 
-    void registerForClass(Student newStu){
-        if(newStu.sameClassMajor == true){
-            cout<<"You are in class 1"<<endl;
+    Course(string courseName){
+        this->courseName = courseName;
+        // this->subject = subject;
+        // this->sections = sections;
+    }
+
+    void addStudentToSection(Student& student, int section){
+        if(section >= 0 && section < sections.size()){
+            sections[section].push_back(&student);
+            cout<<"registered for "<<section<<endl;
         }
         else{
-            cout<<"You are in class 2"<<endl;
+            cout<<"ERROR"<<endl;
         }
     }
+
+
+    
     // register() method
         // for each Student in enrollment list
         // if student.sameClassMajor() == true
@@ -85,15 +100,9 @@ class Course {
         // else
             // register section 2
 
+
     // display sections
         // 1: std1, std2, ...
         // 2: std4, std7, ...
-    void display(){
-        cout<<"Student's Information: "<<endl;
-        cout<<"name: "<<name<<endl;
-        cout<<"ID number: "<<idNumber<<endl;
-        cout<<"Major: "<<major<<endl;
-    }
+    
 };
-
-Course CSCI2380;
