@@ -1,0 +1,15 @@
+Nodes have the following:
+
+
+__________________________
+ yoyo               |  ?  |
+____________________|_____|
+
+30 approval          |  76  |
+77 ball              |  30  |
+55 friends           |  78  |
+76 position          |  55  |
+92 second            |  8   |
+78 flaky             |  92  |
+8  innocent          |  *END*  |
+91 yo-yo             |  77  |
