@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-class Student;  
+
 
 // class SameClassMajor{
 //     private:
@@ -43,10 +43,7 @@ class Student {
             
         }
 
-        void registerForCourse(vector<int>section){
-        ;
         
-    }
         
 
     Student(int inIDnumber = 0, string inName = "", string inMajor = "undecided"){
@@ -75,21 +72,7 @@ class Course {
 
     public:
 
-    Course(string courseName){
-        this->courseName = courseName;
-        // this->subject = subject;
-        // this->sections = sections;
-    }
-
-    void addStudentToSection(Student& student, int section){
-        if(section >= 0 && section < sections.size()){
-            sections[section].push_back(&student);
-            cout<<"registered for "<<section<<endl;
-        }
-        else{
-            cout<<"ERROR"<<endl;
-        }
-    }
+    
 
 
     
