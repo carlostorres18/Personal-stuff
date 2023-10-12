@@ -2,29 +2,8 @@
 #include <vector>
 using namespace std;
 
-
-
-// class SameClassMajor{
-//     private:
-//         string major;
-//         string classSubject;
-
-//     public:
-//         void display(){
-//             if(classSubject == major){
-//                 cout<<"Classroom: You are in Classroom 1"<<endl;
-//             }
-//             else{
-//                 cout<<"Classroom: You are in Classroom 2"<<endl;
-//             }
-            
-//         }
-
-//     SameClassMajor(string inMajor = "undecided", string inClassSubject = "unknown"){
-//         major = inMajor;
-//         classSubject = inClassSubject;
-//     }
-// };
+class Student;
+class Course;
 
 class Student {
     private:
@@ -42,50 +21,41 @@ class Student {
             cout<<"Major: "<<major<<endl;
             
         }
-
-        
         
 
-    Student(int inIDnumber = 0, string inName = "", string inMajor = "undecided"){
-        idNumber = inIDnumber;
-        name = inName;
-        major = inMajor;
+        Student(int inIDnumber = 0, string inName = "", string inMajor = "undecided"){
+            idNumber = inIDnumber;
+            name = inName;
+            major = inMajor;
+        
+        }
+
+        void registerForSubject(Course newC){
+            if(major == newC.subject){
+                newC.push_back(idNumber);
+            }
+        }
+
+        void drop(){
+            // FIXME!!!;
+        }
+
     
-    }
-
-    // sameClassMajor determines if class subject is same as major
-    // Student sameClassMajor(){
-    //     if(classSubject == major){
-    //             cout<<"Classroom: You are in Classroom 1"<<endl;
-    //         }
-    //         else{
-    //             cout<<"Classroom: You are in Classroom 2"<<endl;
-    //         }
-    // }
 };
 
 class Course {
     private:
-    string courseName;
-    string subject;
-    vector<vector<Student*>> sections;
+        string courseName;
+        string subject;
+        vector<int> section;
 
     public:
-
-    
-
-
-    
-    // register() method
-        // for each Student in enrollment list
-        // if student.sameClassMajor() == true
-            // Course register section 1
-        // else
-            // register section 2
+        Course(string inCourseName = "", string inSubject = "", vector<int> inSection){
+            courseName = inCourseName;
+            subject = inSubject;
+            section = inSection;
+        }
 
 
-    // display sections
-        // 1: std1, std2, ...
-        // 2: std4, std7, ...
-    
+
 };
