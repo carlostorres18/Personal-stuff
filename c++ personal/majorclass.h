@@ -24,7 +24,9 @@ class Course {
         }
 
         void showAllStudents() {
-            
+            for(int i = 0; i < section.size(); i++){
+                cout<<section[i]<<endl;
+            }
         }
 
 

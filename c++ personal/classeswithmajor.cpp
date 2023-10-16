@@ -12,5 +12,8 @@ int main(){
     Course Cal("Cal 1", "MATH");
     Student Carlos(92101, "Carlos", "Calculus");
     Carlos.registerForSubject(Cal);
+    Cal.addToSection(92101);
+    Cal.addToSection(202);
+    Cal.showAllStudents();
 
 }
