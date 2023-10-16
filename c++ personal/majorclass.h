@@ -5,6 +5,31 @@ using namespace std;
 class Student;
 class Course;
 
+
+class Course {
+    private:
+        string courseName;
+        //string subject;
+        vector<int> section;
+
+    public:
+    string subject;
+        Course(string inCourseName = "", string inSubject = ""){
+            courseName = inCourseName;
+            subject = inSubject;
+        }
+
+        void addToSection(int SID) {
+            section.push_back(SID);
+        }
+
+        void showAllStudents() {
+            
+        }
+
+
+
+};
 class Student {
     private:
         int idNumber;
@@ -32,7 +57,7 @@ class Student {
 
         void registerForSubject(Course newC){
             if(major == newC.subject){
-                newC.push_back(idNumber);
+                newC.addToSection(idNumber);
             }
         }
 
@@ -43,19 +68,4 @@ class Student {
     
 };
 
-class Course {
-    private:
-        string courseName;
-        string subject;
-        vector<int> section;
 
-    public:
-        Course(string inCourseName = "", string inSubject = "", vector<int> inSection){
-            courseName = inCourseName;
-            subject = inSubject;
-            section = inSection;
-        }
-
-
-
-};
