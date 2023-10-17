@@ -14,6 +14,7 @@ int main(){
     Carlos.registerForSubject(Cal);
     Cal.addToSection(92101);
     Cal.addToSection(202);
+    Cal.addToSection(18);
     Cal.showAllStudents();
 
 }
