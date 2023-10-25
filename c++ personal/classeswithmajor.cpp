@@ -16,5 +16,7 @@ int main(){
     Cal.addToSection(202);
     Cal.addToSection(18);
     Cal.showAllStudents();
+    Carlos.getID();
+    Carlos.getID();
 
 }

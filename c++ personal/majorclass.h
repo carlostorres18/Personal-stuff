@@ -68,7 +68,35 @@ class Student {
             // FIXME!!!;
         }
 
+        void getID(){
+            cout<<idNumber<<endl;
+        }
+
     
+};
+
+class Manager{
+    private: 
+        vector<Course> catalog;
+        vector<Student> students;
+        int M;
+
+    public:
+        void addCourse(Course x){
+            // add to catalog
+        }
+        
+        void enrollStudent(Student y){
+            // add to student
+        }
+
+        void getM(){
+
+        }
+
+        void setM(int newM){
+
+        }
 };
 
 
