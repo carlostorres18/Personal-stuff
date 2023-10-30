@@ -84,10 +84,21 @@ class Manager{
     public:
         void addCourse(Course x){
             // add to catalog
+            catalog.push_back(x);
+            for(int i = 0; i < catalog.size(); i++){
+                // FIX THIS
+                cout<<catalog[i];
+            }
+            
         }
         
         void enrollStudent(Student y){
             // add to student
+            students.push_back(y);
+            for(int i = 0; i < students.size(); i++){
+                // FIX THIS
+                cout<<students[i];
+            }
         }
 
         void getM(){
