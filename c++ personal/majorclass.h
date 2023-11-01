@@ -29,6 +29,17 @@ class Course {
             }
         }
 
+        void display(){
+            cout<<courseName<<endl;
+            printSection();
+        }
+
+        void printSection(){
+            for(int i = 0; i < section.size(); i++){
+                cout<<section.at(i)<<endl;
+            }
+        }
+
 
 
 };
@@ -68,8 +79,8 @@ class Student {
             // FIXME!!!;
         }
 
-        void getID(){
-            cout<<idNumber<<endl;
+        int getID(){
+            return idNumber;
         }
 
     
@@ -87,7 +98,7 @@ class Manager{
             catalog.push_back(x);
             for(int i = 0; i < catalog.size(); i++){
                 // FIX THIS
-                cout<<catalog[i];
+                catalog[i].display();
             }
             
         }
@@ -97,7 +108,7 @@ class Manager{
             students.push_back(y);
             for(int i = 0; i < students.size(); i++){
                 // FIX THIS
-                cout<<students[i];
+                students[i].display();
             }
         }
 
