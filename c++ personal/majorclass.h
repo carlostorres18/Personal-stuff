@@ -111,6 +111,10 @@ class Manager{
                 students[i].display();
             }
         }
+        void drop(){
+            // Fix me
+
+        }
 
         void getM(){
 
