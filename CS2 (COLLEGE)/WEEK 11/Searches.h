@@ -68,3 +68,59 @@ bool binarySearch(int arr[], int length, int start, int end, int target){
     }
 
 }
+
+// Explain the algorithm to find the *location* by index
+    // of the largest number in an array
+
+    // Ex: arr = {5, 1, 7, 8, 2, 9, 10, 1, 5}
+    //      length = 9
+    // answer should be 6, since 10 is at index 6
+
+// 1. Initialize
+    // keep track of largestIndex (start it at zero)
+    // keep track of the max (largest value we have seen)
+        // assume the max is the first number in the array
+    // keep track of my current index
+
+
+// 2. Iteration
+    // go to the next index (ex: index 1)
+    // check if the index is valid
+        // is index less than length?
+            // NO - DONE with Iteration (Go to 3. Wrap up). (We went past end of array)
+            // YES
+            // Check: Is the value at this index greater than max?
+                // NO - Do Nothing
+                // YES - Change value of max to current value, AND
+                    // largestIndex is my current index
+            // Repeat (2. Iteration)
+
+// 3. Wrap up
+    // the largest value (max) is located at... largestIndex
+
+
+// STEP 2: Translate your algorithm to machine instruction
+int largestLoc(int arr[], int length){
+    // 1. Initialization
+    int largestIndex = 0;
+    int max = arr[0];
+
+    
+    // go to next index (keep track of current index)
+    int index = 1;
+    while(index < length){
+        // 2. Iteration
+        // check if current value is larger than max
+        if(arr[index] > max){
+            max = arr[index];
+            largestIndex = index;
+        }
+        index++; // go to next index
+    }
+
+    // 3. Wrap up
+    return largestIndex;
+}
+
+
+
