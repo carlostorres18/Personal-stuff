@@ -74,11 +74,6 @@ class Student {
             }
         }
 
-        void drop(){
-            
-            // FIXME!!!;
-        }
-
         int getID(){
             return idNumber;
         }
@@ -111,8 +106,10 @@ class Manager{
                 students[i].display();
             }
         }
-        void drop(){
+        void drop(int rollNumber){
             // Fix me
+            
+
 
         }
 
