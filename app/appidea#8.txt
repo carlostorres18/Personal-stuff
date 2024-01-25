@@ -1,0 +1,4 @@
+This app will be a social platform only for the use of University Students
+It will require School ID and School email to be able to register
+    - Learn how to read information from a text file to read ID Number and email
+    
