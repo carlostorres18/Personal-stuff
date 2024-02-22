@@ -3,34 +3,25 @@ using namespace std;
 #include "majorclass.h"
 
 int main(){
-    // Student student1(92101, "Carlos", "Calculus");
-    Student student2(92101, "Carlos", "ComputerScience");
+    Course math("Math 101", "Mathematics");
+    Course physics("Physics 101", "Physics");
 
-    // student1.display();
-    // student2.display();
+    Student alice(1012, "Alice", "Mathematics");
+    Student bob(92101, "Bob", "Physics");
 
-    Course Cal("Cal 1", "MATH");
-    Student Carlos(92101, "Carlos", "Calculus");
-    Carlos.registerForSubject(Cal);
-    Cal.addToSection(92101);
-    Cal.addToSection(202);
-    Cal.addToSection(18);
-    // Cal.showAllStudents();
-    Carlos.getID();
-    Carlos.getID();
+    math.addToSection(alice.getID(), alice.getMajor());
+    physics.addToSection(bob.getID(), bob.getMajor());
 
-    Course CS1("CSCI 2830", "CS");
-    Student example2(1818, "Example2", "CS");
+    Manager manager;
+    manager.addCourse(math);
+    manager.addCourse(physics);
 
+    manager.enrollStudent(alice);
+    manager.enrollStudent(bob);
 
-    cout<<"creating manager: "<<endl;
-    Manager example;
-    example.addCourse(Cal);
-    example.addCourse(CS1);
+    cout << "After dropping Bob from Physics course:" << endl;
+    manager.drop(bob.getID());
 
-    cout<<"student example: "<<endl;
-    example.enrollStudent(Carlos);
-    example.enrollStudent(example2);
-
+    return 0;
 
 }
