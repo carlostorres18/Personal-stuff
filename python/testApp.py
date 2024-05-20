@@ -3,10 +3,19 @@ import sys
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, 
                              QLineEdit, QPushButton, 
-                             QLabel, QToolBar, QStatusBar
+                             QLabel, QToolBar, QStatusBar, QVBoxLayout
                              )
 from PyQt6.QtGui import QIcon, QAction
 
+class anotherWindow(QWidget):
+    # this will be another free-floating window
+    def __init__(self):
+        super().__init__()
+        layout = QVBoxLayout()
+        self.label = QLabel("Another Window")
+        layout.addWidget(self.label)
+        self.setLayout(layout)
+    
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
@@ -64,6 +73,11 @@ class MainWindow(QMainWindow):
     def onMyToolBarButtonClick(self, s):
         print("Click", s)
         
+    def showAnotherWindow(self):
+        w = anotherWindow()
+        w.show()
+        
+        
 
 # Start working on implementing new screens for save password pages and previously saved passwords
 
@@ -72,5 +86,9 @@ app = QApplication(sys.argv)
 #Qt widget which will be my window
 window = MainWindow()
 window.show() # By default windows are hidden
+
+# This shows the anotherWindow (other window)
+w =anotherWindow()
+w.show()
 
 sys.exit(app.exec()) # this starts the event loop
