@@ -8,7 +8,7 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget,
 from PyQt6.QtGui import QIcon, QAction
 
 class anotherWindow(QWidget):
-    # this will be another free-floating window
+    # this will make another free-floating window
     def __init__(self):
         super().__init__()
         layout = QVBoxLayout()
