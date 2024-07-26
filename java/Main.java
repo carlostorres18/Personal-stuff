@@ -1,28 +1,44 @@
 import java.awt.*;
+import java.util.Arrays;
 
 class Main {
     public static void main(String[] args){
-        String message = "Hello World!!!";
-        System.out.println(message);
+        for(int i = 0; i <= 30; i++){
+            if(i % 5 == 0 && i % 3 == 0){
+                System.out.println("FizzBuzz");
+            }
+            else if(i % 5 == 0){
+                System.out.println("Buzz");
+            }
+            else if(i % 3 == 0){
+                System.out.println("Fizz");
+            }
+            else{
+                System.out.println(i);
+            }
+        }
+
+        int y = 10;
+        do{
+            System.out.println("value of y = " + y);
+            y++;
+            System.out.println("\n");
+        }while(y < 20);
+
+        
+
         Point point1 = new Point(1, 1);
         Point point2 = point1;
         point1.x = 2;
         System.out.println(point2);
-        int x = 15;
-        int y = 10;
-        if(x < 20){
-            if(y == 10){
-                System.out.println("X = 15, Y = 10");
-            }
-            System.out.println("This is if statement!");
-        }
-        else if(x == 30){
-            System.out.println("The value of x is " + x);
-        }
-        else{
-            System.out.println("This is else statement!");
-        }
-        System.out.println("hello world!");
+
+        String message = "Hello world!";
+        
+        System.out.println(message.replace("!", "*"));
+
+        int [] numbers = {2,3,5,1,4};
+        Arrays.sort(numbers);
+        System.out.println(Arrays.toString(numbers));
     }
 }
 
