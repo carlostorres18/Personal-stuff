@@ -1,5 +1,6 @@
 import java.awt.*;
 import java.util.Arrays;
+import java.util.Scanner;
 
 class Main {
     public static void main(String[] args){
@@ -39,6 +40,18 @@ class Main {
         int [] numbers = {2,3,5,1,4};
         Arrays.sort(numbers);
         System.out.println(Arrays.toString(numbers));
+
+        int [][] multi_dimensional_array = {{1,2,3},{4,5,6}};
+        multi_dimensional_array [0][0] = 1;
+        System.out.println(Arrays.deepToString(multi_dimensional_array));
+
+        final float pi = 3.14F;
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: ");
+        byte age = scanner.nextByte();
+        System.out.println("You are " + age);
+        
     }
 }
 
