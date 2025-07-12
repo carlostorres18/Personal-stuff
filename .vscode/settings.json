@@ -35,7 +35,9 @@
   ],
   "C_Cpp.errorSquiggles": "enabled",
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp"
   },
   "C_Cpp_Runner.useAddressSanitizer": false,
   "C_Cpp_Runner.msvcWarnings": [
