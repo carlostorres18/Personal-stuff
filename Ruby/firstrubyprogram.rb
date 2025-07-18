@@ -53,3 +53,65 @@ puts phrase.index("G") # <- tells you the index position that the specified char
 puts "programming".upcase()
 
 # working with numbers and number methods
+#puts can print out whole, decimal, and negative numbers without any problems
+puts 5.545
+
+# basic arithmetic as any other programming language
+puts 5-9
+puts 5+9
+puts 5*9
+puts 5/9
+puts 5%9
+puts 5**9
+
+num = 20.687
+puts num
+# this will take 20 and make it a string, so that it can be printed out with the string
+puts ("my fav num " + num.to_s)
+puts num.abs() # absolute value
+puts num.round() #round number either up or down depending on the decimals
+
+
+# Math is a class and we can use its methods
+puts Math.sqrt(36) # this method gives us the square root of a number that is put between the parenthesis
+
+puts 1.0 + 7 # using at least one float number, it will output a float number
+puts 1 + 7 # using two whole numbers, it will output a whole number
+
+# using the terminal to get input from the user
+puts "Enter your name: "
+name = gets.chomp() # allows the user to input a piece of information for the program
+puts "Enter your Age: "
+age = gets.chomp()
+
+puts ("Hello " + name + ", you are " + age)
+
+# we will be making a calculator that is going to run in the terminal
+# ruby automatically converts it into a string, and just concatenate the strings
+# we need to convert the strings into nums
+
+puts "Enter a number: "
+num1 = gets.chomp().to_f # you can add the method .to_f to the gets, but if you want a different output, you do it on the puts at the bottom
+puts "Enter another number"
+num2 = gets.chomp().to_f
+
+puts (num1.to_i + num2.to_i) # only problem is that this is turning the numbers into integers, so if we want a float number it will be different
+puts (num1 + num2) # to_f -> to float
+
+# arrays ( yippie!!! )
+# structure/container and it can hold multiple values, you can have different data types for the values
+friends = Array["Kevin", "Karen", "Oscar"] # <- inside they are array elements
+puts friends[0] # <- this is how to get a specific value based on the index position, like other programming languages
+puts friends[0,2] # <- this will get a range of elements, but not including the last element
+
+# we can modify the elements in the array
+friends[0] = "Dwight"
+puts friends
+
+myArray = Array.new # <- this is how to make a new array and not give it information, but give it overtime
+myArray[0] = "Michael"
+puts myArray
+puts friends.length() # <- gives the length of the array
+puts friends.include? "Karen" # <- will check if the string you are looking for in the array is inside
+puts friends.reverse() # <- this will reverse the order of the string
+puts friends.sort() # <- will sort in alphabetical order
