@@ -115,3 +115,46 @@ puts friends.length() # <- gives the length of the array
 puts friends.include? "Karen" # <- will check if the string you are looking for in the array is inside
 puts friends.reverse() # <- this will reverse the order of the string
 puts friends.sort() # <- will sort in alphabetical order
+
+# Hashes - similar to arrays, but we can store a key value pair, where we store a value and give it a key, almost like a dictionary
+# Word = Key, Definition = Value <- something like this
+states = {
+    # key value pairs here
+    # keys are unique, cannot be repeated
+    # key              value
+    :Pennsylvania => "PA",
+    "New York" => "NY",
+    "Oregon" => "OR"
+}
+
+puts states[:Pennsylvania]
+puts states["Oregon"]
+
+# Methods/Functions - block of code that will execute a specific task
+# the syntax for it, is almost like python, ruby is almost like python lol
+def sayhi(name = "no name", age = -1)
+    puts ("Hello " + name + ", you are " + age.to_s) # .to_s, transforms wtv type the value is into a string
+end
+
+sayhi("Mike", 21)
+
+# return statements
+def cube(num)
+    return num * num * num
+end
+
+puts cube(3)
+
+# if statements (finally lol)
+ismale = true
+istall = false
+
+if ismale and istall
+    puts "You are a tall male"
+elsif ismale and !istall
+    puts "You are a short male"
+elsif !ismale and istall
+    puts "You are not male but are tall"
+else
+    puts "You are not male and not tall"
+end
