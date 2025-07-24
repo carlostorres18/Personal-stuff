@@ -158,3 +158,69 @@ elsif !ismale and istall
 else
     puts "You are not male and not tall"
 end
+
+# comparisons - >, <, <=, >=, ==, !=
+def max(num1, num2, num3)
+    if num1 >= num2 and num1 >= num3
+        return num1
+    elsif num2 >= num1 and num2 >= num3
+        return num2
+    else
+        return num3
+    end
+end
+
+puts max(1, 2, 3)
+
+# case expression - using if/else statements over and over will become tedious
+# case expression are more helpful
+def get_day_name(day)
+    day_name = ""
+
+    case day
+    when "mon"
+        day_name = "Monday"
+    when "tue"
+        day_name = "Tuesday"
+    when "wed"
+        day_name = "Wednesday"
+    when "thu"
+        day_name = "Thursday"
+    when "fri"
+        day_name = "Friday"
+    when "sat"
+        day_name = "Saturday"
+    when "sun"
+        day_name = "Sunday"
+    else # this works the same as else statement in if-cases, it will check all of the ones above before checking else
+        day_name = "Invalid abbreviation!"
+    end
+
+    return day_name
+
+end
+
+puts get_day_name("sun")
+puts get_day_name("dog")
+
+# while loops - works the same way as any other programming language
+index = 1
+while index <= 5
+    puts index
+    index += 1
+end
+
+# For loops
+friends_list = ["Kevin", "Karen", "Oscar", "Angela", "Andy"]
+
+friends_list.each do |friend|
+    puts friend
+end
+
+for indexs in 0..5
+    puts indexs
+end
+
+6.times do |index|
+    puts index
+end
